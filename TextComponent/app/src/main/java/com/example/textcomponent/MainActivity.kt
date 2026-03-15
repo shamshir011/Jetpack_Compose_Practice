@@ -16,6 +16,9 @@ import com.example.textcomponent.jetpackCompose.ButtonExample
 import com.example.textcomponent.jetpackCompose.CardExample2
 import com.example.textcomponent.jetpackCompose.LoginScreen
 import com.example.textcomponent.jetpackCompose.OutlineTextFieldExample
+import com.example.textcomponent.jetpackCompose.RememberSaveableExample
+import com.example.textcomponent.jetpackCompose.StateHoistingParent
+import com.example.textcomponent.jetpackCompose.StateManagementExample
 import com.example.textcomponent.ui.theme.TextComponentTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,9 +27,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TextComponentTheme{
-//                ButtonExample()
-//                LoginScreen()
-                CardExample2()
+                StateHoistingParent()
             }
         }
     }
