@@ -2,6 +2,7 @@ package com.example.textcomponent.jetpackCompose
 
 import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,12 +14,16 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -69,7 +74,6 @@ fun ButtonExample(){
                     imageVector = Icons.Default.Person,
                     contentDescription = "Arrow icon"
                 )
-
                 Spacer(modifier = Modifier.width(16.dp))
 
                 Text(text = "Click me")
@@ -79,7 +83,7 @@ fun ButtonExample(){
 }
 
 
-@Preview(showBackground = true, showSystemUi = true)
+//@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun LoginScreen(){
     val context = LocalContext.current
@@ -142,5 +146,74 @@ fun LoginScreen(){
                 fontWeight = FontWeight.SemiBold
             )
         }
+    }
+}
+
+@Composable
+fun OutlinedButtonExample(modifier: Modifier = Modifier){
+
+    Column(modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+        OutlinedButton(
+            onClick = {},
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.outlinedButtonColors(
+                contentColor = Color.Black
+            )
+        ) {
+            Text(text = "Click Me!")
+        }
+    }
+
+}
+
+
+@Composable
+fun TextButtonExample(){
+
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        TextButton(
+            onClick = {}
+        ) {
+            Text(text = "Forget Button")
+        }
+        Text(
+            text = "Forget Button",
+            modifier = Modifier.clickable(onClick = {})
+        )
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun IconButtonExample(){
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+    IconButton(
+        onClick = {}
+    ) {
+        Icon(
+            imageVector = Icons.Default.Home,
+            contentDescription = "Go to Home"
+        )
+    }
+        Icon(
+            imageVector = Icons.Default.Home,
+            contentDescription = "Go to Home"
+        )
+
+        Icon(
+            imageVector = Icons.Default.Home,
+            contentDescription = "Go to Home"
+        )
     }
 }

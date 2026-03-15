@@ -13,6 +13,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.textcomponent.jetpackCompose.ButtonExample
+import com.example.textcomponent.jetpackCompose.CardExample2
+import com.example.textcomponent.jetpackCompose.LoginScreen
 import com.example.textcomponent.jetpackCompose.OutlineTextFieldExample
 import com.example.textcomponent.ui.theme.TextComponentTheme
 
@@ -22,9 +24,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TextComponentTheme{
-
-                ButtonExample()
-
+//                ButtonExample()
+//                LoginScreen()
+                CardExample2()
             }
         }
     }
