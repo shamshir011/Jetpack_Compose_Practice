@@ -11,7 +11,8 @@ fun MyScreen(){
 
     Scaffold(
         topBar = { AppTopBar()},
-        bottomBar = {AppBottomBar()}
+        bottomBar = {AppBottomBar()},
+        floatingActionButton = {FAB()}
     ) { paddingValues ->
         Box(modifier = Modifier.padding(paddingValues)) {
             // Empty for now
