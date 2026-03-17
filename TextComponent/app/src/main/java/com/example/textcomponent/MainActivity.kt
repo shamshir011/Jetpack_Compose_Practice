@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.textcomponent.jetpackCompose.LazyColumnExample
+import com.example.textcomponent.jetpackCompose.LazyRowExample
+import com.example.textcomponent.jetpackCompose.NestedLazyList
 import com.example.textcomponent.jetpackCompose.navigation.LoginScreenUI
 import com.example.textcomponent.jetpackCompose.navigation.NavGraph
 import com.example.textcomponent.ui.theme.TextComponentTheme
@@ -15,7 +17,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TextComponentTheme{
-                LazyColumnExample()
+//                LazyColumnExample()
+                NestedLazyList()
             }
         }
     }
