@@ -10,7 +10,8 @@ import androidx.compose.ui.Modifier
 fun MyScreen(){
 
     Scaffold(
-        topBar = { AppTopBar()}
+        topBar = { AppTopBar()},
+        bottomBar = {AppBottomBar()}
     ) { paddingValues ->
         Box(modifier = Modifier.padding(paddingValues)) {
             // Empty for now
